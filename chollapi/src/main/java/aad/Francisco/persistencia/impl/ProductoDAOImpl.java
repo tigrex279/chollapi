@@ -1,5 +1,8 @@
 package aad.Francisco.persistencia.impl;
 
-public class ProductoDAOImpl {
+import aad.Francisco.modelo.Producto;
+import aad.Francisco.persistencia.ProductoDAO;
+
+public class ProductoDAOImpl extends GenericDAOImpl<Producto, Integer> implements ProductoDAO{
 
 }

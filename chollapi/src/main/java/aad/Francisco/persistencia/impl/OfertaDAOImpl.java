@@ -1,6 +1,6 @@
 package aad.Francisco.persistencia.impl;
 
-import javax.persistence.EntityManager;
+import jakarta.persistence.EntityManager;
 import java.util.List;
 import aad.Francisco.modelo.Oferta;
 import aad.Francisco.persistencia.OfertaDAO;

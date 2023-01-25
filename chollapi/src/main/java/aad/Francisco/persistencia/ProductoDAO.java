@@ -1,5 +1,7 @@
 package aad.Francisco.persistencia;
 
-public class ProductoDAO {
+import aad.Francisco.modelo.Producto;
+
+public interface ProductoDAO extends GenericDAO<Producto, Integer>{
 
 }
