@@ -1,6 +1,7 @@
 package aad.Francisco.modelo;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -26,7 +27,7 @@ public class Oferta implements Serializable{
 	
 	@Temporal(TemporalType.DATE)
 	@Column(name="fecha_hora")//nombre de la columa en la tabla
-	private Date fechaHora;
+	private LocalDateTime fechaHora;
 	
 	private Float precio;
 	
@@ -56,11 +57,11 @@ public class Oferta implements Serializable{
 		this.url = url;
 	}
 
-	public Date getFechaHora() {
+	public LocalDateTime getFechaHora() {
 		return fechaHora;
 	}
 
-	public void setFechaHora(Date fechaHora) {
+	public void setFechaHora(LocalDateTime fechaHora) {
 		this.fechaHora = fechaHora;
 	}
 
