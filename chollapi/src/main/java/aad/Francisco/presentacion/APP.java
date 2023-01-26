@@ -26,7 +26,9 @@ public class APP {
 			
 			oferta.addProducto(producto);
 			
-			
+			em.getTransaction().begin();
+			em.persist(oferta);
+			em.getTransaction().commit();
 //			Playlist plh = new Play();
 //			plh.persist(play);
 //			System.out.println(">>>Canciones añadidas:");
