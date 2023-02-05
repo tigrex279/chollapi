@@ -8,7 +8,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name="producto")
-@NamedQuery(name="Producto.findAll", query="SELECT p FROM producto p")
+@NamedQuery(name="Producto.findAll", query="SELECT p FROM Producto p")
 public class Producto implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
@@ -20,22 +20,14 @@ public class Producto implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	//identificador del producto
 	private Long id;
-	
+	@Column
 	private String nombre;
 	
 	@Column(name="fabricante", nullable = true)//indica la columna puede ser null
 	private Long idFabricante;
 	
-	@ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-	@JoinTable(
-			name="producto_oferta"
-			, joinColumns = {
-					@JoinColumn(name="producto_id")
-			}
-			, inverseJoinColumns = {
-					@JoinColumn(name="oferta_id")
-			}
-		)
+		//bi-directional many-to-many association to Playlist
+		@ManyToMany(mappedBy="productos", cascade={CascadeType.PERSIST, CascadeType.MERGE})
 	private List<Oferta> ofertas = new ArrayList<Oferta>();
 	
 	public Producto() {

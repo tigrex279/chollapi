@@ -5,13 +5,13 @@
 		<class>aad.Francisco.modelo.Producto</class>
 		<exclude-unlisted-classes>true</exclude-unlisted-classes>
 		<properties>
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/chollapi"/>
-			<property name="javax.persistence.jdbc.user" value="chollapi"/>
-			<property name="javax.persistence.jdbc.password" value="MejoresOfertas"/>
-			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
-            <property name="javax.persistence.schema-generation.database.action" value="create"/>
-			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+			<property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/chollapi"/>
+			<property name="jakarta.persistence.jdbc.user" value="chollapi"/>
+			<property name="jakarta.persistence.jdbc.password" value="chollapi"/>
+			<property name="jakarta.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="create"/>
+			<property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
 			<property name="hibernate.show_sql" value="true"/>
 			<property name="hibernate.format_sql" value="true"/>
 		</properties>

@@ -17,7 +17,6 @@ public class GenericDAOImpl <T, ID extends Serializable> implements GenericDAO<T
 	private final static Logger LOGGER = Logger.getLogger(GenericDAOImpl.class.getName());
 
 	
-	@Override
 	public void persist(T entity) {
 		EntityManager em = null;
     	LOGGER.log(Level.INFO,"persisting instance");
@@ -42,7 +41,6 @@ public class GenericDAOImpl <T, ID extends Serializable> implements GenericDAO<T
 		}
 	}
 
-	@Override
 	public void merge(T entity) {
 		EntityManager em = null;
     	LOGGER.log(Level.INFO,"merging instance");
@@ -67,7 +65,6 @@ public class GenericDAOImpl <T, ID extends Serializable> implements GenericDAO<T
 		}
 	}
 
-	@Override
 	public void remove(ID id) {
 		EntityManager em = null;
     	LOGGER.log(Level.INFO,"removing instance");
@@ -96,7 +93,6 @@ public class GenericDAOImpl <T, ID extends Serializable> implements GenericDAO<T
 		}    
 	}
 
-	@Override
 	public T findById(ID id) {
 		EntityManager em = null;
     	LOGGER.log(Level.INFO,"finding instance");
@@ -122,7 +118,6 @@ public class GenericDAOImpl <T, ID extends Serializable> implements GenericDAO<T
 		}	
  	}
 
-	@Override
 	public List<T> finndAll() {
 		EntityManager em = null;
     	LOGGER.log(Level.INFO,"find all");
